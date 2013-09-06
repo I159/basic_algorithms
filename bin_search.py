@@ -1,4 +1,5 @@
 def binary_search(seq, x, lo=0, hi=None):
+    """Binary search on Python. Recursive approach"""
     # Highest search point
     hi = hi or len(seq)
     # Middle search point
