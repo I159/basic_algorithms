@@ -5,16 +5,17 @@ def binary_search(seq, x, lo=0, hi=None):
     # Middle search point
     mid = (lo+hi)//2
 
-    # Try is it correctly given the points
-    try:
+    # Appoint a current value
+    try:
         val = seq[mid]
     except IndexError:
         return False
-
+        
+    # Check whether the current value is match to the desired value
     # If we found the x we return it
     if x == val:
         return mid
-    # Otherwise, if current value bigger than searched value, appoint lowest to middle point
+    # Otherwise, if the current value greater than desired value, appoint lowest to middle point
     lo = mid+1 if val < x else lo
     # Highest appoint to the value if the current value greater than desired value
     hi = mid if val > x else hi
