@@ -11,12 +11,12 @@ def binary_search(seq, x, lo=0, hi=None):
     except IndexError:
         return False
 
-    # If we have got found the x we return it
+    # If we found the x we return it
     if x == val:
         return mid
-    # Otherwise appoint lowest to middle point, if current value bigger than searched value
+    # Otherwise, if current value bigger than searched value, appoint lowest to middle point
     lo = mid+1 if val < x else lo
-    # Highest appoint to valuew if current valuew bigger than searched value
+    # Highest appoint to the value if the current value greater than desired value
     hi = mid if val > x else hi
     # And repeat with shifted data
     return binary_search(seq, x, lo, hi)
