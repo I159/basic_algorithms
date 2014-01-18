@@ -38,6 +38,7 @@ countries = {
         'South Georgia':  {'color': '', 'relations': []}}
 
 
+<<<<<<< HEAD
 class MapColoring(object):
     countries = copy.deepcopy(countries)
 
