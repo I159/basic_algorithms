@@ -9,7 +9,7 @@ def split(arr):
     coupled = zip(*[iter(arr)]*2)
     coupled = [list(i) for i in coupled]
     if odd:
-        coupled[-1][-1] += odd
+        coupled.append([odd, []])
     return coupled
 
 
@@ -45,8 +45,9 @@ def sort(arr):
 def test():
     arr = [randrange(100) for i in range(100)]
     if not sorted(arr) == sort(arr):
-        print sorted(arr)
         print sort(arr)
+    else:
+        print 'SORTED'
 
 
 if __name__ == "__main__":
