@@ -26,12 +26,5 @@ def erathosphenes(up_to):
     nums = range(up_to+1)
     return end_or_repeat(nums)
 
-
-
-
-# Test the stuff
-def test():
-    print erathosphenes(100)
-
 def test_runtime():
     return cProfile.runctx('erathosphenes(100)', globals(), locals())
