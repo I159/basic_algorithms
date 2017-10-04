@@ -1,8 +1,6 @@
 #! usr/env/python python
 import cProfile
 
-# asimpthotic:
-# 1 + (ln(n) * ln(n)) + (ln(n) * ln(n)) = ln(n)
 def get_first_greater(pos, nums):
     return pos+1 if nums[pos+1] else get_first_greater(pos+1, nums)
 
